@@ -62,8 +62,8 @@ body {
   padding: 2em;
   width: 85%;
   max-width: 350px;
-  height: 350px;
-  border-radius: 0.8em;
+  min-height: 350px;
+  border-radius: 2em;
   background: rgb(37, 45, 55);
   background: radial-gradient(circle at top, hsl(213, 23%, 19%) 19%, hsl(216, 12%, 10%) 100%);
 }
@@ -75,20 +75,13 @@ body {
 }
 .box__first-card-star-box {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 2.5em;
-  height: 2.5em;
+  justify-content: center;
+  padding: 1em;
+  width: -moz-fit-content;
+  width: fit-content;
   border-radius: 50%;
   background-color: rgba(149, 158, 172, 0.1);
-}
-.box__first-card-star-box-img {
-  display: block;
-  padding: 0.5em;
-  margin: 0.3em;
-  height: 30px;
-  transform: translateX(1%);
-  transform: translateY(-1%);
 }
 .box__first-card-title {
   font-size: 2rem;
@@ -106,10 +99,10 @@ body {
   width: 100%;
 }
 .box__first-card-btn {
-  background-color: rgba(149, 158, 172, 0.1);
-  color: var(--light-gray);
   width: 2.8em;
   height: 2.8em;
+  background-color: rgba(149, 158, 172, 0.1);
+  color: var(--light-gray);
   border-radius: 50%;
   transition: colors 0.3s, background-color 0.3s;
 }
@@ -144,16 +137,12 @@ body {
   display: none;
 }
 .box__second-card-selected-text {
+  padding: 0.8em;
   margin-top: 0.5em;
-}
-.box__second-card-selected-text p {
   font-size: 1.2rem;
-  padding: 0.6em 1em;
-  color: rgba(251, 116, 19, 0.7);
   background-color: rgba(149, 158, 172, 0.1);
-  font-weight: 400;
-  line-height: 1;
-  border-radius: 11px;
+  color: rgba(251, 116, 19, 0.7);
+  border-radius: 1.4em;
 }
 .box__second-card-title {
   margin-top: 0.5em;
@@ -164,7 +153,6 @@ body {
   color: var(--light-gray);
   line-height: 1.5;
   font-size: 1.3rem;
-  font-weight: 400;
   text-align: center;
 }
 
@@ -176,13 +164,6 @@ body {
   }
   .box__first-card {
     row-gap: 1.5em;
-  }
-  .box__first-card-star-box {
-    width: 3em;
-    height: 3em;
-  }
-  .box__first-card-star-box-img {
-    height: 32px;
   }
   .box__first-card-title {
     font-size: 2.8rem;
@@ -202,10 +183,7 @@ body {
   }
   .box__second-card-selected-text {
     margin-top: 0.7em;
-  }
-  .box__second-card-selected-text p {
     font-size: 1.4rem;
-    padding: 0.8em 1.2em;
   }
   .box__second-card-title {
     font-size: 2.5rem;
