@@ -10,8 +10,9 @@
 }
 
 body {
-	display: grid;
-	place-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	min-height: 100vh;
 	font-family: "Overpass", sans-serif;
 	font-size: 15px;
