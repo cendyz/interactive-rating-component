@@ -1,0 +1,165 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --light-gray: #959eac;
+  --very-dark-blue: #121417;
+  --dark-blue: #252d37;
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+  background-color: var(--very-dark-blue);
+}
+
+.box {
+  padding: 1.3em;
+  width: 90%;
+  max-width: 290px;
+  height: 325px;
+  border-radius: 0.8em;
+  background: rgb(37, 45, 55);
+  background: radial-gradient(circle at top, hsl(213, 23%, 19%) 19%, hsl(216, 12%, 10%) 100%);
+}
+.box__first-card {
+  display: grid;
+  row-gap: 1em;
+  place-items: left;
+}
+.box__first-card-star-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  background-color: rgba(149, 158, 172, 0.1);
+}
+.box__first-card-star-box-img {
+  display: block;
+  padding: 0.5em;
+  margin: 0.3em;
+  height: 30px;
+  transform: translateY(-2%);
+  transform: translateX(2%);
+}
+.box__first-card-title {
+  font-size: 2rem;
+  color: var(--white);
+}
+.box__first-card-text {
+  font-size: 1.25rem;
+  color: var(--light-gray);
+  line-height: 1.5;
+  font-weight: 400;
+}
+.box__first-card-btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5em;
+  width: 100%;
+}
+.box__first-card-btn {
+  background-color: rgba(149, 158, 172, 0.1);
+  color: var(--light-gray);
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+.box__first-card-btn:hover {
+  background-color: var(--orange);
+}
+.box__first-card-btn:focus {
+  background-color: var(--white);
+  color: var(--very-dark-blue);
+}
+.box__first-card-submit-btn {
+  width: 100%;
+  padding: 1em;
+  margin: 0.5em 0;
+  border-radius: 2em;
+  background-color: var(--orange);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+  transition: background-color 0.3s;
+}
+.box__first-card-submit-btn:hover {
+  background-color: var(--white);
+}
+.box__second-card {
+  display: grid;
+  row-gap: 1em;
+  place-items: center;
+  display: none;
+}
+.box__second-card-selected-text {
+  margin-top: 0.5em;
+}
+.box__second-card-selected-text p {
+  font-size: 1.2rem;
+  padding: 0.6em 1em;
+  color: rgba(251, 116, 19, 0.7);
+  background-color: rgba(149, 158, 172, 0.1);
+  font-weight: 400;
+  line-height: 1;
+  border-radius: 11px;
+}
+.box__second-card-title {
+  margin-top: 0.5em;
+  color: var(--white);
+  font-size: 2rem;
+}
+.box__second-card-text {
+  color: var(--light-gray);
+  line-height: 1.5;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+}/*# sourceMappingURL=main.css.map */

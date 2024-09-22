@@ -1,0 +1,141 @@
+@use "./utilities/reset";
+@use "./utilities/mixins" as mixins;
+
+:root {
+	--orange: hsl(25, 97%, 53%);
+	--light-gray: #959eac;
+	--very-dark-blue: #121417;
+	--dark-blue: #252d37;
+	--white: hsl(0, 0%, 100%);
+}
+
+body {
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+	font-family: "Overpass", sans-serif;
+	font-size: 15px;
+	background-color: var(--very-dark-blue);
+}
+
+@mixin card {
+	display: grid;
+	row-gap: 1em;
+}
+
+.box {
+	padding: 1.3em;
+	width: 90%;
+	max-width: 290px;
+	height: 325px;
+	border-radius: 0.8em;
+	background: rgb(37, 45, 55);
+	background: radial-gradient(circle at top, hsl(213, 23%, 19%) 19%, hsl(216, 12%, 10%) 100%);
+	&__first-card {
+		@include card;
+		place-items: left;
+
+		&-star-box {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 2.5em;
+			height: 2.5em;
+			border-radius: 50%;
+			background-color: rgb(149, 158, 172, 0.1);
+
+			&-img {
+				display: block;
+				padding: 0.5em;
+				margin: 0.3em;
+				height: 30px;
+				transform: translateY(-2%);
+				transform: translateX(2%);
+			}
+		}
+		&-title {
+			font-size: 2rem;
+			color: var(--white);
+		}
+		&-text {
+			font-size: 1.25rem;
+			color: var(--light-gray);
+			line-height: 1.5;
+			font-weight: 400;
+		}
+
+		&-btns {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 0.5em;
+			width: 100%;
+		}
+
+		&-btn {
+			background-color: rgb(149, 158, 172, 0.1);
+			color: var(--light-gray);
+			width: 3em;
+			height: 3em;
+			border-radius: 50%;
+			transition: background-color 0.3s;
+
+			&:hover {
+				background-color: var(--orange);
+			}
+
+			&:focus {
+				background-color: var(--white);
+				color: var(--very-dark-blue);
+			}
+		}
+
+		&-submit-btn {
+			width: 100%;
+			padding: 1em;
+			margin: 0.5em 0;
+			border-radius: 2em;
+			background-color: var(--orange);
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+			font-weight: 400;
+			transition: background-color 0.3s;
+
+			&:hover {
+				background-color: var(--white);
+			}
+		}
+	}
+
+	&__second-card {
+		@include card;
+		place-items: center;
+		display: none;
+
+		&-selected-text {
+			margin-top: 0.5em;
+
+			p {
+				font-size: 1.2rem;
+				padding: 0.6em 1em;
+				color: rgb(251, 116, 19, 0.7);
+				background-color: rgb(149, 158, 172, 0.1);
+				font-weight: 400;
+				line-height: 1;
+				border-radius: 11px;
+			}
+		}
+
+		&-title {
+			margin-top: 0.5em;
+			color: var(--white);
+			font-size: 2rem;
+		}
+		&-text {
+			color: var(--light-gray);
+			line-height: 1.5;
+			font-size: 1.3rem;
+			font-weight: 400;
+			text-align: center;
+		}
+	}
+}
