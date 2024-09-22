@@ -59,18 +59,20 @@ body {
 }
 
 .box {
-  padding: 1.3em;
-  width: 90%;
-  max-width: 290px;
-  height: 325px;
+  padding: 2em;
+  width: 85%;
+  max-width: 350px;
+  height: 350px;
   border-radius: 0.8em;
   background: rgb(37, 45, 55);
   background: radial-gradient(circle at top, hsl(213, 23%, 19%) 19%, hsl(216, 12%, 10%) 100%);
 }
 .box__first-card {
-  display: grid;
-  row-gap: 1em;
-  place-items: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 1.5em;
+  display: none;
 }
 .box__first-card-star-box {
   display: flex;
@@ -102,7 +104,6 @@ body {
 .box__first-card-btns {
   display: flex;
   justify-content: space-between;
-  margin-top: 0.5em;
   width: 100%;
 }
 .box__first-card-btn {
@@ -111,10 +112,11 @@ body {
   width: 2.8em;
   height: 2.8em;
   border-radius: 50%;
-  transition: background-color 0.3s;
+  transition: colors 0.3s, background-color 0.3s;
 }
 .box__first-card-btn:hover {
   background-color: var(--orange);
+  color: var(--white);
 }
 .box__first-card-btn:focus {
   background-color: var(--white);
@@ -127,7 +129,7 @@ body {
   border-radius: 2em;
   background-color: var(--orange);
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   font-weight: 400;
   transition: background-color 0.3s;
 }
@@ -135,9 +137,11 @@ body {
   background-color: var(--white);
 }
 .box__second-card {
-  display: grid;
-  row-gap: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   place-items: center;
+  row-gap: 1.1em;
   display: none;
 }
 .box__second-card-selected-text {
@@ -163,4 +167,52 @@ body {
   font-size: 1.3rem;
   font-weight: 400;
   text-align: center;
+}
+
+@media (min-width: 576px) {
+  .box {
+    padding: 1.9em;
+    max-width: 400px;
+    height: 425px;
+  }
+  .box__first-card {
+    row-gap: 1.5em;
+  }
+  .box__first-card-star-box {
+    width: 3em;
+    height: 3em;
+  }
+  .box__first-card-star-box-img {
+    height: 32px;
+  }
+  .box__first-card-title {
+    font-size: 2.8rem;
+  }
+  .box__first-card-text {
+    font-size: 1.5rem;
+  }
+  .box__first-card-btn {
+    width: 3.7em;
+    height: 3.7em;
+  }
+  .box__first-card-submit-btn {
+    margin-top: 1.2em;
+  }
+  .box__second-card-img {
+    margin-top: 1.5em;
+  }
+  .box__second-card-selected-text {
+    margin-top: 0.7em;
+  }
+  .box__second-card-selected-text p {
+    font-size: 1.4rem;
+    padding: 0.8em 1.2em;
+  }
+  .box__second-card-title {
+    font-size: 2.5rem;
+  }
+  .box__second-card-text {
+    margin-top: 0.2em;
+    font-size: 1.5rem;
+  }
 }/*# sourceMappingURL=main.css.map */
